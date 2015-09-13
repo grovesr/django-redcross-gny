@@ -31,7 +31,8 @@ def get_secret(setting, secrets=secrets):
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
-
+PICTURE_SIZE = 600
+THUMBNAIL_SIZE = 90
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = get_secret('REDCROSS_GNY_SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -105,6 +106,8 @@ PAGE_SIZE=17
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_ROOT = '/home3/ulsterc3/public_html/arc/gny/static'
+MEDIA_ROOT = '/home3/ulsterc3/public_html/arc/gny/uploads'
+MEDIA_URL = '/uploads/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
