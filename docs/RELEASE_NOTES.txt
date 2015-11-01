@@ -1,0 +1,6 @@
+Version 1.2.0:
+* ab43ddd fix:fix 404 test to reference 404 handler
+* f305093 add admin and version template vars to render contexts, also remove unused vars and replace unused tuple var returns
+* 56c2fc7 add template vars for adminName, adminEmail, siteVersion, imsVersion
+* 0b52973 add settings for VERSION, SITE_VERSION, and SERVER_EMAIL
+* 220ec01 feat:add VERSION so we have a single source of version information
