@@ -12,3 +12,5 @@
 * feac80e (HEAD, master) add TEMP_DIR to settings
 26/11/2015 Version 1.4.0:
 * 02a49f0 (HEAD, master) feat: Update for paging and small style updates.
+28/12/2015 Version 1.5.0:
+* 2a55838 (HEAD, master) feat: Update to Django 1.9 from 1.7
