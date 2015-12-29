@@ -4,6 +4,7 @@
 <head>    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="{% static 'base/js/announcement.js' %}" ></script>
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css" >
     <link rel="stylesheet" href="{% static 'base/css/base_style.css' %}" type="text/css" >
     {% block extra_scripts %} {% endblock extra_scripts %}
     {% block extrastyle %}{% endblock extrastyle %}
@@ -56,6 +57,29 @@
         </div>
         <div id="content" class="{% block coltype %}colM{% endblock %}">
             {% block announcement %}
+                <div id="announcement">
+                    {% if errorMessage %}
+                        <p id="error-note" class="errornote">
+                            <i class="fa fa-times fa-lg announcement-close"></i>
+                            <i class="fa fa-minus-circle fa-lg announcement-icon"></i>
+                            {{ errorMessage | safe }}
+                        </p>
+                    {%endif %}
+                    {% if warningMessage %}
+                        <p id="warning-note" class="warningnote">
+                            <i class="fa fa-times fa-lg announcement-close"></i>
+                            <i class="fa fa-exclamation-circle fa-lg announcement-icon"></i>
+                            {{ warningMessage | safe }}
+                        </p>
+                    {%endif %}
+                    {% if infoMessage %}
+                        <p id="info-note" class="infonote">
+                            <i class="fa fa-times fa-lg announcement-close"></i>
+                            <i class="fa fa-info-circle fa-lg announcement-icon"></i>
+                            {{ infoMessage | safe }}
+                        </p>
+                    {%endif %}
+                </div>
             {% endblock announcement %}
             {% block content %}
                 <h1>Greater New York Region Web apps</h1>
